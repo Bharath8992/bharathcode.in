@@ -1,1 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharath A | Python Django Backend Developer in Chennai</title>
+<meta name="description" content="Python & Django backend developer in Chennai. 2.5+ years building REST APIs, e-commerce, booking and billing platforms. View projects and hire Bharath A.">
+<meta name="keywords" content="python developer, django developer, backend developer, django rest framework developer, REST API developer, full stack developer chennai, python developer chennai, freelance python developer, hire django developer, Bharath A">
+<meta name="author" content="Bharath A">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#E5103A">
+<link rel="canonical" href="https://www.YOUR-DOMAIN.com/">
+<link rel="icon" href="img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="apple-touch-icon" href="img/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bharath A | Python Developer">
+<meta property="og:title" content="Bharath A | Python Django Backend Developer in Chennai">
+<meta property="og:description" content="2.5+ years building REST APIs, e-commerce, booking and billing platforms with Python and Django. See my live projects.">
+<meta property="og:url" content="https://www.YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://www.YOUR-DOMAIN.com/img/og-cover.jpg">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bharath A | Python Django Backend Developer in Chennai">
+<meta name="twitter:description" content="Python & Django backend developer with 2.5+ years of experience. View projects and hire Bharath A.">
+<meta name="twitter:image" content="https://www.YOUR-DOMAIN.com/img/og-cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Person","@id":"https://www.YOUR-DOMAIN.com/#person","name":"Bharath A","jobTitle":"Python Django Backend Developer","description":"Python and Django backend developer in Chennai with 2.5+ years of experience building REST APIs, e-commerce, booking and billing platforms.","url":"https://www.YOUR-DOMAIN.com/","image":"https://www.YOUR-DOMAIN.com/img/profile.jpg","email":"mailto:ajiabharath@gmail.com","telephone":"+91-6379573737","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","addressCountry":"IN"},"worksFor":{"@type":"Organization","name":"Mckbytes Technologies"},"alumniOf":{"@type":"CollegeOrUniversity","name":"SRM Institute of Science and Technology"},"knowsAbout":["Python","Django","Django REST Framework","REST API development","Backend development","MySQL","MongoDB","JWT and OAuth authentication","CI/CD","E-commerce development"],"sameAs":["https://github.com/Bharath8992","https://www.linkedin.com/in/bharath18"]},
+{"@type":"WebSite","@id":"https://www.YOUR-DOMAIN.com/#website","name":"Bharath A | Python Developer Portfolio","url":"https://www.YOUR-DOMAIN.com/","inLanguage":"en-IN","publisher":{"@id":"https://www.YOUR-DOMAIN.com/#person"}}]}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brandRed:'#E5103A',brandDark:'#0E0E0E'},fontFamily:{sans:['"Inter Tight"','sans-serif']}}}}
+</script>
+<style>
+:root{--pad:3vw;--bg:#FCF4EA;--nav:#EFEBE4;--red:#E5103A}
+html,body{background:var(--bg)}
+body{font-family:'Inter Tight',sans-serif;color:#0e0e0e;overflow-x:clip;letter-spacing:-0.01em}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+.animate-spin-slow{animation:spin-slow 12s linear infinite}
+.main-blurred{filter:blur(8px);pointer-events:none;user-select:none}
+#main-content{transition:filter .3s}
+.px-page{padding-left:var(--pad);padding-right:var(--pad)}
+.tag{font-size:14px;font-weight:500}.tag span,.tag-red span,.wk-tag span{color:var(--red)}
 
+/* NAV */
+.nav-pill{background:var(--nav);height:46px;padding:0 10px;display:flex;align-items:center;font-size:18px;font-weight:500}
+.nav-pill>a,.nav-item>button{padding:0 16px;display:flex;align-items:center;gap:6px;height:46px;color:#0e0e0e;transition:color .2s}
+.nav-pill .dot{width:4px;height:4px;border-radius:50%;background:currentColor;display:inline-block}
+.nav-pill>a:hover,.nav-item:hover>button{color:var(--red)}
+.nav-item{position:relative}
+.dd{position:absolute;top:100%;left:-14px;width:260px;background:var(--nav);padding:10px 15px 24px;opacity:0;visibility:hidden;transform:translateY(6px);transition:all .18s;z-index:60}
+.nav-item:hover .dd{opacity:1;visibility:visible;transform:none}
+.dd a{display:flex;justify-content:space-between;align-items:center;height:42px;padding:0 15px;font-size:18px;font-weight:500;color:#0e0e0e;transition:background .15s}
+.dd a span{opacity:0;transition:opacity .15s;font-size:13px}
+.dd a:hover{background:#FBF3E8}.dd a:hover span{opacity:1}
+
+/* HERO */
+h1.hero{font-size:clamp(44px,6.35vw,128px);line-height:.98;font-weight:700;letter-spacing:-0.035em;text-transform:uppercase}
+#slot-start{width:min(450px,100%);aspect-ratio:450/253}
+#slot-end{width:100%;height:clamp(260px,28.2vw,560px)}
+#cube-slot{aspect-ratio:1/1;width:min(100%,56vh,520px)}
+
+/* CUBE (moves from hero to the right side of the "Brands to people" block) */
+#cube{position:absolute;z-index:31;cursor:grab;touch-action:pan-y;will-change:left,top,width,height}
+#cube:active{cursor:grabbing}
+#cube canvas{display:block;width:100%;height:100%}
+
+/* REEL (moves between slots on scroll) */
+#reel{position:absolute;overflow:hidden;background:#EFF0EE;z-index:30;will-change:left,top,width,height}
+#reel .collage,#reel .brand{position:absolute;inset:0}
+.collage{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;background:#EFF0EE}
+.collage div{background-size:cover;background-position:center}
+.brand{display:flex;align-items:center;justify-content:flex-start;padding-left:3.5%;font-family:'Anton',sans-serif;color:var(--red);text-transform:uppercase;white-space:nowrap;line-height:1;opacity:0}
+.badge{position:absolute;left:50%;top:50%;width:136px;height:136px;margin:-68px 0 0 -68px;border-radius:50%;background:#0e0e0e;pointer-events:none}
+.badge svg{position:absolute;inset:0;width:100%;height:100%}
+.badge .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px}
+
+/* ABOUT ROW */
+.ab-row{position:relative;margin-top:120px}
+.ab-img{display:none}
+.ab-content{border-top:1px solid #E8E1D6;border-bottom:1px solid #E8E1D6;padding:54px 0;display:flex;flex-direction:column;gap:32px}
+.ab-p{font-size:18px;line-height:27px;color:#3b3b3b;letter-spacing:-0.005em;max-width:482px;margin:0}
+.ab-btn{margin-top:23px;height:62px;padding:0 24px 0 9px;border:1px solid #0e0e0e;display:flex;align-items:center;gap:13px;font-size:16px;font-weight:600;letter-spacing:-0.01em;background:transparent;transition:background .2s,color .2s;width:max-content}
+.ab-btn:hover{background:#0e0e0e;color:#fff}
+.ab-ico{width:42px;height:42px;background:#0e0e0e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px}
+.ab-right img{width:62px;height:62px;border-radius:50%;object-fit:cover;background:#ccc}
+.ab-right img+img{margin-left:-21px}
+.ab-trust{margin:21px 0 0;font-size:22px;line-height:28.5px;font-weight:500;letter-spacing:-0.015em;max-width:250px}
+.ab-trust span{color:var(--red);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+@media(min-width:1024px){
+  .ab-row{height:278px}
+  .ab-img{display:block;position:absolute;left:143px;top:-1px;width:230px;height:277px;z-index:5;will-change:transform}
+  .ab-content{margin-left:603px;max-width:calc(100% - 603px);width:956px;height:278px;box-sizing:border-box;flex-direction:row;gap:0;padding:54px 0 0}
+  .ab-left{width:535px;flex:none;height:170px;border-right:1px solid #E1D9CB}
+  .ab-right{padding-left:60px}
+}
+
+/* PROCESS (pinned, scroll-driven, clickable) */
+#process{height:320vh;position:relative}
+.pr-stage{position:sticky;top:0;height:100vh;box-sizing:border-box;padding-top:43px;padding-bottom:58px;display:grid;grid-template-columns:minmax(0,1fr) 34vw 27.6vw;gap:27px}
+.pr-left{display:flex;flex-direction:column;justify-content:space-between;min-height:0}
+.pr-title{margin-top:16px;font-size:clamp(34px,3.3vw,66px);line-height:1.16;font-weight:600;text-transform:uppercase;letter-spacing:-.035em}
+.pr-hint{margin-top:18px;font-size:13px;color:#777;font-weight:500}
+.pr-num{height:1em;font-size:clamp(70px,6.2vw,120px);line-height:1;font-weight:600;letter-spacing:-.04em;overflow:hidden;margin-bottom:-.02em}
+.pr-numtrack{transition:transform .8s cubic-bezier(.7,0,.2,1)}
+.pr-numtrack div{height:1em;line-height:1}
+.pr-card{position:relative;overflow:hidden;min-height:0}
+.pr-img{position:absolute;inset:0;width:100%;height:90%;object-fit:cover;transition:transform .9s cubic-bezier(.7,0,.2,1)}
+.pr-img:not([data-i="0"]){transform:translateX(101%)}
+.pr-prog{position:absolute;left:0;bottom:0;height:3px;background:var(--red);width:0;transition:width .5s}
+.pr-list{min-height:0;overflow:hidden}
+.pr-step{background:#EDE6DB;transition:background .5s;display:none}
+.pr-step.on{display:block}
+.pr-head{height:clamp(60px,8.5vh,90px);display:flex;align-items:center;justify-content:space-between;padding:0 27px;font-size:clamp(20px,1.48vw,30px);font-weight:500;letter-spacing:-.02em;transition:color .5s;cursor:pointer}
+.pr-head small{font-size:13px;color:var(--red);font-weight:600}
+.pr-bw{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s cubic-bezier(.6,0,.2,1)}
+.pr-body{overflow:hidden;min-height:0;opacity:0;transform:translateY(40px);transition:opacity .6s .15s,transform .7s .15s cubic-bezier(.2,.7,.2,1)}
+.pr-body p{margin:0;padding:0 27px 22px;font-size:16px;line-height:24px;color:#3b3b3b}
+.pr-steps{border-top:1px solid #E0D8CB;padding:24px 27px 22px 27px}
+.pr-steps .tag{font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chips span{background:#FCF4EA;border-radius:999px;height:24px;padding:0 11px;display:inline-flex;align-items:center;font-size:14px;font-weight:600;letter-spacing:-.01em}
+.pr-step.past[data-i="0"]{background:#F9F2E7}.pr-step.past[data-i="0"] .pr-head{color:#C3BEB5}
+.pr-step.past[data-i="1"]{background:#F3ECE1}.pr-step.past[data-i="1"] .pr-head{color:#8a857c}
+.pr-step.past[data-i="2"]{background:#EFE8DD}.pr-step.past[data-i="2"] .pr-head{color:#6a665e}
+.pr-step.cur .pr-bw{grid-template-rows:1fr}
+.pr-step.cur .pr-body{opacity:1;transform:none}
+@media(max-width:1023px){
+  #process{height:auto}.pr-stage{position:static;height:auto;grid-template-columns:1fr;gap:24px;padding-top:60px}.pr-num,.pr-hint,.pr-prog{display:none}
+  .pr-card{height:50vh}.pr-img{height:100%;transform:none!important}.pr-img:not([data-i="0"]){display:none}.pr-step{display:block!important}.pr-step .pr-bw{grid-template-rows:1fr}.pr-body{opacity:1;transform:none}.pr-step.past .pr-head{color:inherit}
+}
+
+/* WORK (horizontal scroll driven by vertical scroll) */
+#work{position:relative;background:var(--bg)}
+.wk-stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.wk-tag{font-size:14px;font-weight:500}
+.wk-title{font-size:clamp(36px,6vw,100px);line-height:.9;font-weight:700;letter-spacing:-.045em;text-transform:uppercase;white-space:nowrap;margin:0}
+.wk-track{display:flex;gap:16px;will-change:transform;padding:0 var(--pad)}
+.wk-card{flex:none;width:min(30vw,calc((100vh - 360px)*1.2));min-width:290px;outline:0}
+.wk-img{position:relative;aspect-ratio:1.3;overflow:hidden;background:#222}
+.wk-img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.wk-card:hover .wk-img>img{transform:scale(1.07)}
+.wk-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:rgba(255,255,255,.6);font-size:13px;font-weight:600;padding:20px}
+.wk-pill{position:absolute;left:16px;top:16px;z-index:3;background:#FCF4EA;font-size:12px;font-weight:600;padding:3px 9px;border-radius:5px}
+.wk-over{position:absolute;inset:0;z-index:4;background:rgba(14,14,14,.9);color:#fff;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;transform:translateY(101%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.wk-card:hover .wk-over,.wk-card:focus-within .wk-over{transform:none}
+.wk-over h3{margin:0;font-size:clamp(18px,1.5vw,26px);font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.wk-over p{margin:0;font-size:14px;line-height:1.4;color:#cfcfcf}
+.wk-over .oc{display:flex;flex-wrap:wrap;gap:6px}.wk-over .oc span{border:1px solid #555;border-radius:99px;font-size:11px;font-weight:600;padding:2px 9px}
+.wk-over a{font-size:13px;font-weight:600;color:var(--red);width:max-content}
+.wk-meta{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:20px;font-weight:500;gap:10px}
+.wk-meta small{font-size:12px;font-weight:600;order:2;white-space:nowrap}.wk-meta small b{color:var(--red);font-weight:500}
+.wk-bar{margin:0 var(--pad);height:1px;background:#E3DCCF;position:relative}.wk-bar i{position:absolute;left:0;top:-1px;height:2px;width:0;background:#0e0e0e}
+.wk-btnrow{display:flex;justify-content:flex-end;padding:0 var(--pad)}
+.btn-o{height:56px;padding:0 17px 0 9px;border:1px solid #0e0e0e;display:inline-flex;align-items:center;gap:13px;font-size:15px;font-weight:700;letter-spacing:-.015em;transition:.2s}
+.btn-o .ic{width:38px;height:38px;background:#0e0e0e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px}
+.btn-o:hover{background:#0e0e0e;color:#fff}
+.art-1{background:radial-gradient(ellipse at 20% 30%,#ff3a1f 0,#e5201a 35%,#7a0a0f 60%,#150404 100%)}
+.art-2{background:linear-gradient(135deg,#0a0a0a 46%,#aaa49a 46%)}
+.art-3{background:#4a4a4a}.art-4{background:#141414}
+.art-1,.art-2,.art-3,.art-4{position:absolute;inset:0}
+@media(hover:none){.wk-over{transform:none;background:linear-gradient(transparent,rgba(14,14,14,.92) 45%)}.wk-over p,.wk-over .oc{display:none}}
+
+/* SKILLS (dark) */
+#solutions{background:#0e0e0e;color:#fff;padding:90px var(--pad) 40px}
+.sol-head{text-align:center}
+.sol-head h2{font-size:clamp(34px,4vw,76px);line-height:1.08;font-weight:600;text-transform:uppercase;letter-spacing:-.035em;margin:18px 0 0}
+.sol-top{display:flex;justify-content:space-between;align-items:flex-end;margin:70px 0 36px;gap:24px}
+.sol-top p{font-size:15px;line-height:1.5;color:#a5a5a5;max-width:240px;margin:0}
+.btn-d{height:46px;padding:0 14px 0 6px;border:1px solid #3a3a3a;display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:#fff}
+.btn-d .ic{width:34px;height:34px;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:12px}
+.sol-row{display:grid;grid-template-columns:19% 1fr auto;align-items:start;padding:28px 0;border-top:1px solid #262626}
+.sol-row:hover h3{color:var(--red)}
+.sol-row .n{font-size:18px;font-weight:500}.sol-row .n::before{content:'[ ';color:var(--red)}.sol-row .n::after{content:' ]';color:var(--red)}
+.sol-row h3{font-size:clamp(28px,var(--pad),52px);line-height:1.05;font-weight:500;letter-spacing:-.03em;margin:0;transition:color .3s}
+.sol-d{font-size:15px;line-height:1.5;color:#a5a5a5;max-width:520px;margin:14px 0 0}
+.cs{display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:280px;gap:6px}
+.cs span{border:1px solid #444;border-radius:999px;font-size:11px;font-weight:600;padding:2px 9px}
+
+/* BACKEND CHALLENGES (interactive) */
+#testi{background:#EDE6DB;padding:72px var(--pad) 0}
+.t-label{text-align:center;font-size:14px;font-weight:500;letter-spacing:-.01em}.t-label span{color:var(--red)}
+.t-wrap{position:relative;width:min(65.4vw,1114px);margin:66px auto 0}
+.t-card{background:#FCF4EA;min-height:465px;padding:54px 40px 40px;text-align:center;box-sizing:border-box}
+.t-in{transition:opacity .3s}
+.t-meta{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;font-size:13px;font-weight:600}
+.t-meta b{color:var(--red);font-weight:600}.t-meta span{background:#EDE6DB;border-radius:99px;padding:3px 12px}
+.t-q{font-size:clamp(24px,2.5vw,42px);line-height:1.2;font-weight:500;letter-spacing:-.03em;margin:34px auto 0;max-width:900px}
+.t-rev{margin-top:30px;height:50px;padding:0 24px;border:1px solid #0e0e0e;background:transparent;font-size:15px;font-weight:600;transition:.2s}
+.t-rev:hover,.t-rev.open{background:#0e0e0e;color:#fff}
+.t-fix{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.6,0,.2,1)}
+.t-fix.open{grid-template-rows:1fr}
+.t-fix>div{overflow:hidden}.t-fix p{margin:22px auto 0;max-width:760px;font-size:18px;line-height:1.5;color:#3b3b3b;text-align:left;border-left:3px solid var(--red);padding-left:18px}
+.t-dots{display:flex;justify-content:center;gap:10px;margin-top:26px}
+.t-dots button{width:34px;height:4px;background:#d6cdbd;border:0;padding:0;transition:.3s}.t-dots button.on{background:var(--red);width:54px}
+.t-arrow{position:absolute;top:50%;width:48px;height:48px;margin-top:-24px;background:#FCF4EA;display:flex;align-items:center;justify-content:center;transition:.2s}
+.t-arrow:hover{background:#0e0e0e;color:#fff}
+.t-author{text-align:center;margin-top:34px;position:relative;padding-bottom:78px}
+.t-author b{display:block;font-size:24px;font-weight:600;letter-spacing:-.02em}.t-author span{font-size:17px;color:#7b7b7b}
+.clients{border-top:1px solid #E0D8CB;margin:0 calc(-1*var(--pad));padding:56px 0 70px;text-align:center;overflow:hidden}
+.mq{display:flex;width:max-content;gap:22px;margin-top:40px;animation:mq 40s linear infinite}
+.mq:hover{animation-play-state:paused}
+.mq a{height:72px;padding:0 30px;background:#FCF4EA;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;letter-spacing:-.04em;white-space:nowrap;transition:.2s}
+.mq a:hover{background:#0e0e0e;color:#fff}.mq a i{font-size:12px;margin-left:10px;color:var(--red)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(max-width:1023px){.t-arrow{display:none}.t-wrap{width:100%}.t-card{padding:40px 22px 30px}}
+
+/* BLOG / PROJECT HIGHLIGHTS */
+#blog{padding:110px var(--pad) 90px}
+.bl-head{display:grid;grid-template-columns:34% 1fr 24%;gap:20px;align-items:end}
+.bl-head h2{font-size:clamp(34px,3.8vw,72px);line-height:1.08;font-weight:600;text-transform:uppercase;letter-spacing:-.035em;margin:14px 0 22px}
+.bl-head p{font-size:15px;line-height:1.45;color:#444;margin:0 0 4px}
+.bl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:70px}
+.bl-card .ph{aspect-ratio:1.28;overflow:hidden}.bl-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.bl-card:hover .ph img{transform:scale(1.05)}
+.bl-by{font-size:13px;color:#555;margin-top:22px}.bl-by b{color:#0e0e0e;font-weight:600}
+.bl-card h3{font-size:clamp(20px,1.6vw,28px);line-height:1.2;font-weight:600;letter-spacing:-.03em;margin:22px 0 24px}
+.bl-card .rm{display:inline-block;border:1px solid #0e0e0e;font-size:13px;font-weight:600;padding:10px 16px;margin-bottom:22px}
+.bl-card{border-bottom:1px solid #0e0e0e}
+@media(max-width:1023px){.bl-head{grid-template-columns:1fr}.bl-head>div{grid-column:auto!important;padding-left:0!important}.bl-grid{grid-template-columns:1fr}.sol-row{grid-template-columns:1fr;gap:12px}.cs{justify-content:flex-start;max-width:100%}.sol-top{flex-direction:column;align-items:flex-start;margin:40px 0 24px}
+ #work{height:auto!important}.wk-stage{position:static;height:auto;padding:70px 0}.wk-title{white-space:normal}.wk-track{overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.wk-card{width:78vw;scroll-snap-align:start}.wk-bar{display:none}.wk-btnrow{justify-content:flex-start}}
+
+/* CTA + FOOTER */
+#cta{height:270px;padding:0 var(--pad);display:flex;justify-content:space-between;align-items:center;color:#FCF4EA;
+ background:radial-gradient(circle at 90% 45%,rgba(255,50,75,.95) 0,rgba(255,50,75,0) 20%),radial-gradient(ellipse 22% 95% at 47% 28%,rgba(255,60,85,.7),transparent 70%),linear-gradient(100deg,#750620,#8b0b25 55%,#7a0620)}
+#cta h2{font-size:clamp(60px,7.1vw,136px);line-height:1;font-weight:600;letter-spacing:-.045em;margin:0;padding-bottom:.08em}
+#cta .btns{display:flex;gap:10px}
+#cta .btns a{height:72px;font-size:16px;font-weight:600;letter-spacing:-.02em;display:flex;align-items:center}
+#footer{background:#0b0b0b;color:#bdbdbd;position:relative;isolation:isolate;overflow:hidden}
+#footer::before{content:'';position:absolute;inset:0;z-index:-2;background:url("img/h1-bg.gif") center/cover no-repeat}
+#footer::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,11,.78),rgba(11,11,11,.25) 55%,rgba(11,11,11,.88))}
+.f-grid{display:grid;grid-template-columns:25.2% 16.7% 18.2% 1fr;padding:130px var(--pad) 100px}
+.f-grid>div{min-height:348px}
+.f-c1{padding-right:8vw}.f-c2,.f-c3{border-left:1px solid #222;padding-left:5.5vw}.f-c4{border-left:1px solid #222;text-align:right}
+.f-tag{font-size:14px;font-weight:600;color:#fff;margin-top:4px}.f-tag span{color:var(--red);font-weight:400}
+.f-links{margin-top:46px}.f-links a{display:block;font-size:18px;line-height:37.4px;color:#bdbdbd;transition:color .2s}.f-links a:hover{color:var(--red)}
+.f-logo{display:flex;align-items:center;gap:8px;color:#fff;font-size:44px;font-weight:500;letter-spacing:-.03em;line-height:1}
+.f-news{font-size:18px;line-height:28px;margin:34px 0 0;max-width:340px;color:#bdbdbd}
+.f-mail{margin-top:42px;display:flex;align-items:center;border-bottom:1px solid #fff;max-width:321px}
+.f-mail input{flex:1;background:transparent;border:0;outline:0;color:#fff;font:16px 'Inter Tight';padding:10px 0;min-width:0}.f-mail input::placeholder{color:#8d8d8d}
+.f-mail button{width:36px;height:36px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.f-big{display:block;font-size:clamp(26px,3.35vw,64px);line-height:1.28;font-weight:600;letter-spacing:-.035em;color:#fff;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+.f-big+.f-big{margin-top:2px}
+.f-soc{display:flex;justify-content:flex-end;gap:8px;margin-top:36px}
+.f-soc a{width:30px;height:30px;border-radius:50%;border:1px solid #2c2c2c;background:#151515;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px}
+.f-soc a:hover{background:var(--red)}
+.f-loc{margin:46px 0 0 auto;width:min(285px,100%);text-align:left}
+.f-loc p{font-size:18px;line-height:28px;margin:22px 0 0;color:#9a9a9a}
+.f-bot{border-top:1px solid #1f1f1f;height:77px;padding:0 var(--pad);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;font-size:15px}
+.f-bot a:hover{color:#fff}.f-bot .sep{display:inline-block;width:1px;height:14px;background:#2b2b2b;margin:0 14px;vertical-align:middle}
+.f-bot b{color:#fff;font-weight:600}.f-top{justify-self:end;display:flex;align-items:center;gap:10px}.f-top i{color:var(--red)}
+@media(max-width:1023px){.f-grid{grid-template-columns:1fr 1fr;padding:70px var(--pad)}.f-c1,.f-c2,.f-c3,.f-c4{border:0;padding:0 0 30px;text-align:left}.f-grid>div{min-height:0}.f-loc{margin-left:0}.f-soc{justify-content:flex-start}.f-bot{grid-template-columns:1fr;height:auto;padding:20px var(--pad);gap:10px}.f-top{justify-self:start}#cta{height:auto;padding:50px var(--pad);flex-wrap:wrap;gap:20px}.badge{width:100px;height:100px;margin:-50px 0 0 -50px}}
+
+/* cursor dot */
+#cursor{position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--red);pointer-events:none;z-index:9999;transition:width .2s,height .2s,margin .2s;will-change:transform}
+#cursor.big{width:22px;height:22px;margin:-11px 0 0 -11px}
+@media(hover:none){#cursor{display:none}}
+
+/* DRAWER (matches reference design) */
+.d-stack{position:relative;width:100%;max-width:365px;height:240px;margin-top:34px}
+.d-stack div{position:absolute;width:36%;height:150px;overflow:hidden}
+.d-stack div:nth-child(1){left:0;bottom:0;z-index:1}.d-stack div:nth-child(2){left:20.3%;bottom:29px;z-index:2}
+.d-stack div:nth-child(3){left:40.6%;bottom:58px;z-index:3}.d-stack div:nth-child(4){left:60.9%;bottom:87px;z-index:4}
+.d-stack img{width:100%;height:100%;object-fit:cover;display:block}
+.d-soc a{width:28px;height:28px;border-radius:50%;border:1px solid #E0D8CB;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;transition:.2s}
+.d-soc a:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.mq span{height:72px;padding:0 30px;background:#FCF4EA;display:flex;align-items:center;font-size:22px;font-weight:700;letter-spacing:-.04em;white-space:nowrap;color:#777}
+.t-dots button{position:relative}.t-dots button::before{content:'';position:absolute;inset:-14px -3px}
+/* LOGO */
+.logo-img{height:48px;width:auto;display:block}
+.logo-sq{width:40px;height:40px;background:var(--red);grid-template-columns:1fr 1fr;gap:3px;padding:5px}.logo-sq i{background:#fff}
+.brand-name{display:none;font-size:34px;font-weight:600;letter-spacing:-.04em;line-height:1}
+.brand-name.always{display:block}
+@media(min-width:1024px){.brand-name{display:block}}
+.f-logo-img{height:62px}.d-logo-img{height:44px}.f-logo .brand-name{font-size:44px}
+/* LOADER */
+#loader{position:fixed;inset:0;z-index:10000;background:#FCF4EA;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;transition:transform .9s cubic-bezier(.7,0,.2,1)}
+#loader.out{transform:translateY(-100%)}
+.ld-in{display:flex;align-items:center;gap:14px}
+.ld-logo{height:clamp(120px,24vw,180px);width:auto;display:block;clip-path:inset(0 100% 0 0);animation:ldReveal 1.2s cubic-bezier(.7,0,.2,1) .2s forwards}
+.ld-name{display:none;font-size:clamp(56px,7vw,112px);font-weight:600;letter-spacing:-.045em;line-height:1.1;overflow:hidden;max-width:0;opacity:0;white-space:nowrap;animation:ldName 1s cubic-bezier(.7,0,.2,1) 1.2s forwards}
+@media(min-width:1024px){.ld-name{display:block}}
+.ld-bar{width:min(240px,50vw);height:2px;background:#E3DCCF;position:relative;overflow:hidden}
+.ld-bar i{position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left;animation:ldBar 2.1s ease-in-out .1s forwards}
+@keyframes ldReveal{to{clip-path:inset(0 0 0 0)}}
+@keyframes ldName{to{max-width:560px;opacity:1}}
+@keyframes ldBar{to{transform:scaleX(1)}}
+body.loading{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.ld-logo,.ld-name,.ld-bar i{animation-duration:.01s;animation-delay:0s}#loader{transition-duration:.01s}}
+/* FAQ */
+#faq{padding:100px var(--pad);background:#F7EEE1;border-top:1px solid #E8E1D6}
+.faq-grid{display:grid;grid-template-columns:36% 1fr;gap:70px;align-items:start}
+.faq-side{position:sticky;top:40px}
+.faq-h{font-size:clamp(30px,3.6vw,64px);line-height:1.05;font-weight:600;text-transform:uppercase;letter-spacing:-.035em;margin:16px 0 18px;max-width:12ch}
+.faq-intro{font-size:17px;line-height:1.5;color:#555;max-width:420px;margin:0 0 24px}
+.faq-roles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;max-width:460px}
+.faq-roles span{border:1px solid #0e0e0e;border-radius:99px;padding:3px 13px;font-size:13px;font-weight:600}
+.faq-help{background:#0e0e0e;color:#fff;padding:26px;max-width:420px}
+.faq-help b{display:block;font-size:22px;font-weight:600;letter-spacing:-.02em}
+.faq-help p{margin:8px 0 18px;color:#a5a5a5;font-size:15px}
+.faq-help a{display:inline-flex;align-items:center;height:46px;padding:0 20px;background:var(--red);color:#fff;font-weight:600;font-size:14px;transition:background .2s}.faq-help a:hover{background:#c90d32}
+#faq details{background:#FCF4EA;border:1px solid #E0D8CB;margin-bottom:12px;transition:background .3s,border-color .3s,box-shadow .3s}
+#faq details:hover{border-color:#0e0e0e}
+#faq details[open]{background:#fff;border-color:#0e0e0e;box-shadow:0 14px 30px -18px rgba(0,0,0,.25)}
+#faq summary{display:flex;align-items:center;gap:18px;padding:22px 24px;cursor:pointer;list-style:none;font-size:clamp(17px,1.5vw,22px);font-weight:600;letter-spacing:-.02em}
+#faq summary::-webkit-details-marker{display:none}
+.faq-n{color:var(--red);font-size:13px;font-weight:700;min-width:26px}
+.faq-q{flex:1}
+.faq-i{position:relative;width:34px;height:34px;border:1px solid #0e0e0e;border-radius:50%;flex:none;transition:background .3s,border-color .3s,color .3s}
+.faq-i::before,.faq-i::after{content:'';position:absolute;left:50%;top:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:currentColor;transition:transform .3s}
+.faq-i::after{transform:rotate(90deg)}
+#faq details[open] .faq-i{background:var(--red);border-color:var(--red);color:#fff}
+#faq details[open] .faq-i::after{transform:rotate(0)}
+.faq-a{overflow:hidden}
+.faq-a p{margin:0;padding:0 24px 26px 68px;font-size:16px;line-height:1.6;color:#444;max-width:740px}
+@media(max-width:1023px){.faq-side{position:static}.faq-a p{padding-left:24px}.logo-img{height:42px}.f-logo-img{height:54px}}
+@media(max-width:600px){#faq summary{padding:18px;gap:12px}.faq-a p{padding:0 18px 20px}}
+/* touch: tap a project card to read details */
+@media(hover:none){.wk-card:focus-within .wk-over{background:rgba(14,14,14,.94)}.wk-card:focus-within .wk-over p{display:block}.wk-card:focus-within .wk-over .oc{display:flex}}
+/* RESPONSIVE */
+@media(max-width:1023px){
+ :root{--pad:5vw}
+ header{padding-top:20px!important}
+ h1.hero{font-size:clamp(30px,8.6vw,72px)}
+ #cube-slot{width:min(100%,46vh,420px)}
+ .ab-row{margin-top:56px}
+ #solutions{padding-top:64px}
+ #blog{padding:70px var(--pad)}.bl-grid{margin-top:40px}
+ #faq{padding:64px var(--pad)}.faq-grid{grid-template-columns:1fr;gap:28px}
+ #testi{padding-top:60px}.t-wrap{margin-top:34px}.t-author{padding-bottom:50px}
+ .wk-card{min-width:0}
+ #cta h2{font-size:clamp(44px,13vw,90px)}#cta .btns{flex-wrap:wrap}#cta .btns a{height:60px}
+ .f-c1,.f-c4{grid-column:1/3}.f-c4{order:-1}
+}
+@media(max-width:600px){.f-grid{gap:28px 16px}.t-q{font-size:22px}.sol-row h3{font-size:28px}.mq a,.mq span{font-size:18px;padding:0 22px}.ab-trust{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.mq,.animate-spin-slow{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="antialiased selection:bg-brandRed selection:text-white">
+<div id="cursor"></div>
+
+<!-- LOADER: logo reveals, then the name slides in next to it (desktop) -->
+<div id="loader" role="status" aria-label="Loading">
+  <div class="ld-in">
+    <img class="ld-logo" src="img/logo.png" alt="" onerror="this.style.display='none'">
+    <span class="ld-name" aria-hidden="true">bharath</span>
+  </div>
+  <div class="ld-bar"><i></i></div>
+</div>
+<noscript><style>#loader{display:none}body.loading{overflow:auto}</style></noscript>
+<script>
+(function(){
+  const L=document.getElementById('loader');if(!L)return;
+  document.body.classList.add('loading');
+  const t0=performance.now(),MIN=2300,MAX=5000;let done=false;
+  function finish(){
+    if(done)return;done=true;
+    setTimeout(()=>{
+      L.classList.add('out');document.body.classList.remove('loading');
+      setTimeout(()=>{L.remove();dispatchEvent(new Event('loaderdone'))},900);
+    },Math.max(0,MIN-(performance.now()-t0)));
+  }
+  addEventListener('load',finish);setTimeout(finish,MAX);
+})();
+</script>
+
+<div id="main-content">
+<div id="page" class="relative">
+
+<!-- HEADER -->
+<header class="px-page flex items-center justify-between relative z-40" style="padding-top:32px">
+  <a href="#" class="flex items-center gap-3" aria-label="Bharath A - home">
+    <img src="img/logo.png" alt="Bharath A logo" class="logo-img" width="40" height="48" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+    <span class="logo-sq" style="display:none"><i></i><i></i><i></i><i></i></span>
+    <span class="brand-name">bharath</span>
+  </a>
+  <nav class="nav-pill hidden lg:flex absolute left-1/2 -translate-x-1/2" style="top:32px">
+    <a href="#">Home <span class="dot"></span></a>
+    <div class="nav-item">
+      <button>Sections <span class="dot"></span></button>
+      <div class="dd">
+        <a href="#about">About me <span>↗</span></a>
+        <a href="#process">How I work <span>↗</span></a>
+        <a href="#work">Projects <span>↗</span></a>
+        <a href="#solutions">Skills <span>↗</span></a>
+        <a href="#testi">Backend challenges <span>↗</span></a>
+        <a href="#testi-clients">Live projects <span>↗</span></a>
+      </div>
+    </div>
+    <a href="#work">Portfolio <span class="dot"></span></a>
+    <a href="#blog">Highlights <span class="dot"></span></a>
+    <a href="#footer">Contact</a>
+  </nav>
+  <div class="flex items-center gap-[10px]">
+    <a href="resume/Bharath-A-Resume.pdf" download class="hidden md:flex items-center gap-2 h-12 px-5 border border-brandDark font-semibold text-[15px] hover:bg-brandDark hover:text-white transition-colors"><i class="fa-solid fa-download text-[13px]"></i>Download Resume</a>
+    <button id="open-drawer-btn" class="hidden sm:block bg-brandRed text-white font-semibold text-[15px] px-6 h-12 hover:bg-[#c90d32] transition-colors">Get in touch</button>
+    <button id="open-drawer-icon-btn" class="w-12 h-12 bg-[#F0EBE3] flex items-center justify-center hover:bg-[#e6e0d6] transition-colors" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#0e0e0e"><g><circle cx="4" cy="4" r="1.7"/><circle cx="12" cy="4" r="1.7"/><circle cx="20" cy="4" r="1.7"/><circle cx="4" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="20" cy="12" r="1.7"/><circle cx="4" cy="20" r="1.7"/><circle cx="12" cy="20" r="1.7"/><circle cx="20" cy="20" r="1.7"/></g></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<main id="content">
+<section id="home" class="px-page flex flex-col justify-between" style="min-height:calc(100vh - 80px);padding-bottom:44px">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-6">
+    <div class="lg:col-span-4"><div id="cube-slot"></div></div>
+    <div class="lg:col-span-8 text-left lg:text-right">
+      <h1 class="hero"><span class="mr-2 font-normal">→</span>Python developer<br>building backends<br>that scale</h1>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mt-10">
+    <div class="lg:col-span-4 flex flex-col gap-3">
+      <div class="flex items-center gap-2 text-[15px] font-medium"><i class="fa-solid fa-globe text-brandRed"></i>Based in Chennai, India</div>
+      <p class="text-[18px] text-neutral-600 leading-snug max-w-[400px]">I'm Bharath A, a Python Django backend developer in Chennai with 2.5+ years of experience building REST APIs, e-commerce, booking and billing platforms.</p>
+      <div class="flex flex-wrap gap-[10px] pt-3">
+        <a href="#work" class="bg-brandDark text-white h-[72px] pl-3 pr-6 flex items-center gap-3 font-semibold text-[16px] tracking-tight">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" class="w-12 h-12 object-cover bg-brandRed" alt="">View my work
+        </a>
+        <a href="#footer" class="h-[72px] px-7 border border-brandDark font-semibold text-[16px] hover:bg-brandDark hover:text-white transition-colors flex items-center">Contact me</a>
+      </div>
+    </div>
+    <div class="lg:col-span-4 flex justify-center">
+      <a href="#about" class="flex flex-col items-center gap-3 text-[15px] font-medium">
+        <span class="w-6 h-6 rounded-full border border-brandRed text-brandRed flex items-center justify-center"><i class="fa-solid fa-arrow-down text-[10px]"></i></span>
+        <span><span class="text-brandRed">[</span> SCROLL DOWN <span class="text-brandRed">]</span></span>
+      </a>
+    </div>
+    <div class="lg:col-span-4 flex justify-start lg:justify-end"><div id="slot-start"></div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="px-page" style="padding-top:64px;padding-bottom:110px">
+  <div id="slot-end"></div>
+  <div class="grid grid-cols-1 lg:grid-cols-[26%_1fr] gap-8 mt-14">
+    <div class="text-[15px] font-medium pt-3"><span class="text-brandRed">[</span> ABOUT ME <span class="text-brandRed">]</span></div>
+    <h2 class="text-[clamp(24px,3.2vw,60px)] leading-[1.1] font-semibold uppercase tracking-[-0.03em]">Python and Django backend developer with 2.5+ years of experience building secure, scalable web applications, from first line of code to live deployment.</h2>
+  </div>
+
+  <div id="about-row" class="ab-row">
+    <div id="about-img" class="ab-img">
+      <div class="w-full h-full relative overflow-hidden bg-[#b3001b]">
+        <img src="img/profile.jpg" onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80'" alt="Bharath A" class="w-full h-full object-cover grayscale contrast-125">
+        <div class="absolute inset-0 bg-[#e5103a] mix-blend-multiply"></div>
+        <div class="absolute inset-0" style="background:repeating-linear-gradient(90deg,rgba(0,0,0,.3) 0 3px,transparent 3px 7px)"></div>
+      </div>
+    </div>
+    <div class="ab-content">
+      <div class="ab-left">
+        <p class="ab-p">I started as a Junior Software Engineer at DX Enablers in 2024 and now work as a Full Stack Developer at Mckbytes Technologies, building and deploying real products.</p>
+        <a href="resume/Bharath-A-Resume.pdf" download class="ab-btn"><span class="ab-ico">↓</span>Download resume</a>
+      </div>
+      <div class="ab-right">
+        <div class="flex">
+          <img src="img/Python.webp" alt="">
+          <img src="img/postman.webp" alt="">
+          <img src="img/sql.png" alt="">
+          <img src="img/image.png" alt="">
+        </div>
+        <p class="ab-trust"><span>2</span> companies, growing from junior engineer to full stack developer.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px] mt-16 lg:mt-24">
+    <div class="bg-[#EDE6DA] p-9 flex flex-col justify-between min-h-[420px] lg:min-h-[565px]">
+      <div><div class="text-[clamp(70px,7vw,140px)] leading-none font-semibold tracking-[-0.04em]">2.5<span class="text-[.45em] font-medium tracking-normal">+</span></div><p class="text-[18px] text-neutral-700 mt-2">Years building Python and Django applications.</p></div>
+      <p class="self-end text-right uppercase font-bold text-[24px] leading-[1.02] tracking-[-0.05em]">Building<br>reliable backend<br>applications</p>
+    </div>
+    <div class="bg-[#EDE6DA] p-9 flex flex-col justify-between min-h-[420px] lg:min-h-[565px]">
+      <div><div class="text-[clamp(70px,7vw,140px)] leading-none font-semibold tracking-[-0.04em]">10<span class="text-[.45em] font-medium tracking-normal">+</span></div><p class="text-[18px] text-neutral-700 mt-2">Production applications and live websites.</p></div>
+      <p class="self-end text-right uppercase font-bold text-[24px] leading-[1.02] tracking-[-0.05em]">From development<br>to deployment<br>and beyond</p>
+    </div>
+    <div class="md:col-span-2 min-h-[420px] lg:min-h-[565px] overflow-hidden">
+      <img src="img/bharath.png" alt="Workspace" class="w-full h-full object-cover grayscale-[.4]">
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK (pinned, scroll-driven, clickable) -->
+<section id="process">
+  <div class="pr-stage px-page">
+    <div class="pr-left">
+      <div><div class="tag"><span>[</span> HOW I WORK <span>]</span></div><h2 class="pr-title">From idea<br>to production,<br>in four steps.</h2><p class="pr-hint">Scroll to move through the steps, or click a finished step to go back.</p></div>
+      <div class="pr-num"><div class="pr-numtrack"><div>01.</div><div>02.</div><div>03.</div><div>04.</div></div></div>
+    </div>
+    <div class="pr-card">
+      <img class="pr-img" data-i="0" src="img/Deploy and Maintain_ DevOps Workspace.png" alt="">
+      <img class="pr-img" data-i="1" src="img/Modern Database API Workspace.png" alt="">
+      <img class="pr-img" data-i="2" src="img/Build, Test, Optimise Workspace.png" alt="">
+      <img class="pr-img" data-i="3" src="img/Deploy and Maintain_ DevOps Workspace.png" alt="">
+      <div class="pr-prog" id="pr-prog"></div>
+    </div>
+    <div class="pr-list">
+      <div class="pr-step" data-i="0"><div class="pr-head">Requirements &amp; Analysis <small>01</small></div><div class="pr-bw"><div class="pr-body"><p>I study the business problem, talk through edge cases and turn it into clear features, data models and success criteria before writing code.</p><div class="pr-steps"><div class="tag"><span>[</span> STEPS <span>]</span></div><div class="chips"><span>System analysis</span><span>Requirements</span><span>Planning</span></div></div></div></div></div>
+      <div class="pr-step" data-i="1"><div class="pr-head">Database &amp; API Design <small>02</small></div><div class="pr-bw"><div class="pr-body"><p>I design scalable schemas and clean REST APIs, with JWT or OAuth authentication and role-based access where needed.</p><div class="pr-steps"><div class="tag"><span>[</span> STEPS <span>]</span></div><div class="chips"><span>Schema design</span><span>REST APIs</span><span>JWT &amp; OAuth</span></div></div></div></div></div>
+      <div class="pr-step" data-i="2"><div class="pr-head">Build, Test &amp; Optimise <small>03</small></div><div class="pr-bw"><div class="pr-body"><p>I build in Agile sprints with Django and DRF, then debug, test and tune queries so the system stays fast and reliable.</p><div class="pr-steps"><div class="tag"><span>[</span> STEPS <span>]</span></div><div class="chips"><span>Django &amp; DRF</span><span>Debugging</span><span>Query tuning</span></div></div></div></div></div>
+      <div class="pr-step" data-i="3"><div class="pr-head">Deploy &amp; Maintain <small>04</small></div><div class="pr-bw"><div class="pr-body"><p>I ship to production with Git workflows, CI/CD and VPS hosting, then keep monitoring, fixing and improving after launch.</p><div class="pr-steps"><div class="tag"><span>[</span> STEPS <span>]</span></div><div class="chips"><span>CI/CD</span><span>VPS deployment</span><span>Support</span></div></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS: vertical scroll drives horizontal movement; hover shows project details -->
+<section id="work">
+  <div class="wk-stage">
+    <div class="px-page"><div class="wk-tag"><span>[</span>  SELECTED WORK  <span>]</span></div><h2 class="wk-title mt-3">Projects I've built.</h2></div>
+    <div class="wk-track" id="wk-track">
+      <!-- Images go in the img/ folder with the file names shown on each card. Hover (or tap on mobile) a card to read about the project. -->
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-3"></div><div class="wk-ph">img/wopper.png</div><img src="img/wopper.png" alt="Wopper.in project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">E-commerce</span><div class="wk-over"><h3>Wopper.in</h3><p>Production e-commerce store with product management, OTP login, orders, Razorpay payments and admin management.</p><div class="oc"><span>Django</span><span>DRF</span><span>MySQL</span><span>Razorpay</span></div><a href="https://wopper.in" target="_blank" rel="noopener">Visit live site ↗</a></div></div><div class="wk-meta"><span>Wopper e-commerce</span><small>[ <b>Live</b> ]</small></div></article>
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-2"></div><div class="wk-ph">img/billing.png</div><img src="img/billing.png" alt="Billing Management System project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">Business Tool</span><div class="wk-over"><h3>Billing Management System</h3><p>Billing platform with invoice generation, stock tracking, customer management, expenses and service tracking for a therapy centre.</p><div class="oc"><span>Django</span><span>DRF</span><span>SQL</span></div><a href="https://www.curatherapycentre.com/" target="_blank" rel="noopener">Visit live site ↗</a></div></div><div class="wk-meta"><span>Billing system</span><small>[ <b>Live</b> ]</small></div></article>
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-3"></div><div class="wk-ph">img/volume.png</div><img src="img/ai-volume.jpg" alt="AI Volume Controller project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">AI Project</span><div class="wk-over"><h3>AI Volume Controller</h3><p>An AI-powered volume controller built with Python, a hands-on project exploring AI and automation.</p><div class="oc"><span>Python</span><span>AI</span><span>Automation</span></div></div></div><div class="wk-meta"><span>AI volume controller</span><small>[ <b>AI</b> ]</small></div></article>
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-4"></div><div class="wk-ph">img/inventory.jpg</div><img src="img/inverntry.png" alt="Inventory Management System project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">Inventory</span><div class="wk-over"><h3>Inventory Management System</h3><p>Database-driven app for product creation, stock tracking, listing and everyday inventory operations.</p><div class="oc"><span>Python</span><span>Django</span><span>DRF</span><span>MySQL</span></div></div></div><div class="wk-meta"><span>Inventory system</span><small>[ <b>2024</b> ]</small></div></article>
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-2"></div><div class="wk-ph">img/msquare.png</div><img src="img/msquare.png" alt="Hotel Channel Manager project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">Hospitality</span><div class="wk-over"><h3>Hotel Channel Manager</h3><p>One backend for rooms, availability and bookings, synced across booking platforms to prevent double bookings.</p><div class="oc"><span>Django</span><span>REST APIs</span><span>MySQL</span><span>Third-party APIs</span></div><a href="https://msquare.mckbytes.tech" target="_blank" rel="noopener">Visit live site ↗</a></div></div><div class="wk-meta"><span>Channel manager</span><small>[ <b>Live</b> ]</small></div></article>
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-4"></div><div class="wk-ph">img/vy16.png</div><img src="img/vy16.png" alt="VY16 Design Studio project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">E-commerce</span><div class="wk-over"><h3>VY16 Design Studio</h3><p>Clothing e-commerce store for VY16 Design Studio, built and deployed end to end.</p><div class="oc"><span>Python</span><span>Django</span><span>E-commerce</span></div><a href="https://www.vy16designstudio.com/" target="_blank" rel="noopener">Visit live site ↗</a></div></div><div class="wk-meta"><span>Clothing e-commerce</span><small>[ <b>Live</b> ]</small></div></article>
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-1"></div><div class="wk-ph">img/Matrimony.png</div><img src="img/Matrimony.png" alt="Matrimony Website project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">Web App</span><div class="wk-over"><h3>Matrimony Website</h3><p>A matrimony website taken from development all the way to deployment.</p><div class="oc"><span>Django</span><span>Deployment</span></div><a href="https://srivarammanamalai.com" target="_blank" rel="noopener">Visit live site ↗</a></div></div><div class="wk-meta"><span>Matrimony site</span><small>[ <b>Live</b> ]</small></div></article>
+      <article class="wk-card" tabindex="0"><div class="wk-img"><div class="art-1"></div><div class="wk-ph">img/square-box.png</div><img src="img/square-box.png" alt="Real Estate Website project by Bharath A" loading="lazy" onerror="this.remove()"><span class="wk-pill">Real Estate</span><div class="wk-over"><h3>Real Estate Website</h3><p>Property listings and booking workflows with search filters, an admin dashboard and real-time property management.</p><div class="oc"><span>Django</span><span>JavaScript</span><span>SQL</span><span>REST APIs</span></div><a href="https://squarebox.click" target="_blank" rel="noopener">Visit live site ↗</a></div></div><div class="wk-meta"><span>Real estate website</span><small>[ <b>Live</b> ]</small></div></article>
+    </div>
+    <div class="wk-bar"><i id="wk-fill"></i></div>
+    <div class="wk-btnrow"><a href="#testi-clients" class="btn-o"><span class="ic">↗</span>See live projects</a></div>
+  </div>
+</section>
+
+<!-- SKILLS (dark) -->
+<section id="solutions">
+  <div class="sol-head"><div class="tag"><span>[</span> SKILLS <span>]</span></div><h2>Backend engineering.<br>End-to-end delivery.</h2></div>
+  <div class="sol-top"><a href="#footer" class="btn-d"><span class="ic">↗</span>Work with me</a><p>Python-first, with the databases, tooling and practices a production system needs.</p></div>
+  <div class="sol-row"><span class="n">01</span><div><h3>Python &amp; Django</h3><p class="sol-d">Web applications and backend systems with Django and Django REST Framework.</p></div><div class="cs"><span>Python</span><span>Django</span><span>DRF</span><span>JavaScript</span></div></div>
+  <div class="sol-row"><span class="n">02</span><div><h3>REST API Development</h3><p class="sol-d">Secure client-server APIs, microservice-style design and third-party integrations.</p></div><div class="cs"><span>RESTful APIs</span><span>JWT &amp; OAuth</span><span>Microservices</span></div></div>
+  <div class="sol-row"><span class="n">03</span><div><h3>Databases</h3><p class="sol-d">Schema design, query optimisation and data processing for reliable data retrieval.</p></div><div class="cs"><span>SQL</span><span>MySQL</span><span>MongoDB</span><span>Query tuning</span></div></div>
+  <div class="sol-row"><span class="n">04</span><div><h3>Automation</h3><p class="sol-d">Python scripts and workflows that remove repetitive work, plus testing and debugging.</p></div><div class="cs"><span>Python automation</span><span>Selenium (basic)</span><span>Scripting</span></div></div>
+  <div class="sol-row"><span class="n">05</span><div><h3>DevOps &amp; Version Control</h3><p class="sol-d">Git workflows, CI/CD pipelines and VPS deployments for steady releases.</p></div><div class="cs"><span>Git</span><span>GitHub</span><span>Bitbucket</span><span>Jenkins</span><span>CI/CD</span></div></div>
+  <div class="sol-row"><span class="n">06</span><div><h3>Practices &amp; Learning</h3><p class="sol-d">Agile delivery and system analysis, with growing knowledge of ML and GenAI.</p></div><div class="cs"><span>Agile</span><span>SDLC</span><span>ML basics</span><span>NLP</span><span>GenAI exposure</span></div></div>
+  <div style="border-top:1px solid #262626"></div>
+</section>
+
+<!-- BACKEND CHALLENGES (interactive) + LIVE PROJECT LINKS -->
+<section id="testi">
+  <div class="t-label"><span>[</span> BACKEND CHALLENGES I'VE FACED <span>]</span></div>
+  <div class="t-wrap">
+    <button class="t-arrow" id="t-prev" style="left:-108px" aria-label="Previous challenge"><i class="fa-solid fa-arrow-left text-sm"></i></button>
+    <button class="t-arrow" id="t-next" style="right:-108px" aria-label="Next challenge"><i class="fa-solid fa-arrow-right text-sm"></i></button>
+    <div class="t-card"><div class="t-in" id="t-card">
+      <div class="t-meta"><b id="t-count"></b><span id="t-proj"></span></div>
+      <p class="t-q" id="t-q"></p>
+      <button class="t-rev" id="t-rev" aria-expanded="false">See how I solved it ↓</button>
+      <div class="t-fix" id="t-fix"><div><p id="t-fixp"></p><div class="chips" id="t-tags" style="justify-content:center"></div></div></div>
+      <div class="t-dots" id="t-dots"></div>
+    </div></div>
+    <div class="t-author"><b>Bharath A</b><span>Python Developer · Django &amp; REST APIs</span></div>
+  </div>
+  <div class="clients" id="testi-clients"><div class="tag-red" style="font-size:12px;font-weight:500"><span>[</span> MY LIVE PROJECTS · CLICK TO VISIT <span>]</span></div><div class="mq" id="mq"></div></div>
+</section>
+
+<!-- PROJECT HIGHLIGHTS -->
+<section id="blog">
+  <div class="bl-head">
+    <div style="grid-column:1/3;padding-left:34%"><div class="tag-red" style="font-size:12px;font-weight:500"><span>[</span> HIGHLIGHTS <span>]</span></div><h2>Three main projects<br>shipped end to end</h2><a href="#work" class="btn-o"><span class="ic">↗</span>More projects</a></div>
+    <p>Real products I took from planning and development all the way to deployment.</p>
+  </div>
+  <div class="bl-grid">
+    <article class="bl-card"><div class="ph"><img src="img/wopper.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80'" alt="Wopper.in by Bharath A"></div><div class="bl-by">By <b>BHARATH</b> &nbsp;|&nbsp; 11 NOV 2025</div><h3>wopper.in | E-commerce | end-to-end development to deployment</h3><a href="https://wopper.in" target="_blank" rel="noopener" class="rm">Visit site</a></article>
+    <article class="bl-card"><div class="ph"><img src="img/Matrimony.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop&q=80'" alt="Matrimony website by Bharath A"></div><div class="bl-by">By <b>BHARATH</b> &nbsp;|&nbsp; 11 JAN 2026</div><h3>Matrimony website | end-to-end development to deployment</h3><a href="https://srivarammanamalai.com" target="_blank" rel="noopener" class="rm">Visit site</a></article>
+    <article class="bl-card"><div class="ph"><img src="img/msquare.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&auto=format&fit=crop&q=80'" alt="Hotel channel manager by Bharath A"></div><div class="bl-by">By <b>BHARATH</b> &nbsp;|&nbsp; 11 APR 2026</div><h3>Hotel channel manager | rooms, availability and bookings in sync</h3><a href="https://msquare.mckbytes.tech" target="_blank" rel="noopener" class="rm">Visit site</a></article>
+  </div>
+</section>
+
+<!-- FAQ + roles (SEO) -->
+<section id="faq">
+  <div class="faq-grid">
+    <div class="faq-side">
+      <div class="tag"><span>[</span> FAQ <span>]</span></div>
+      <h2 class="faq-h">Frequently asked questions</h2>
+      <p class="faq-intro">Quick answers for recruiters and clients looking for a Python Django backend developer.</p>
+      <div class="faq-roles" aria-label="Roles I am available for"><span>Python Developer</span><span>Django Developer</span><span>Backend Developer</span><span>Django REST Framework Developer</span><span>REST API Developer</span><span>Full Stack Developer (Django)</span><span>Python Developer in Chennai</span><span>Freelance Python Developer</span></div>
+      <div class="faq-help"><b>Still have a question?</b><p>Send me a message and I'll reply within a day.</p><a href="mailto:ajiabharath@gmail.com">Email me ↗</a></div>
+    </div>
+    <div class="faq-list">
+      <details open><summary><span class="faq-n">01</span><span class="faq-q">Who is Bharath A?</span><span class="faq-i" aria-hidden="true"></span></summary><div class="faq-a"><p>Bharath A is a Python and Django backend developer based in Chennai, India, with 2.5+ years of experience building REST APIs and web applications. He currently works as a Full Stack Developer at Mckbytes Technologies.</p></div></details>
+      <details><summary><span class="faq-n">02</span><span class="faq-q">What has Bharath built with Python and Django?</span><span class="faq-i" aria-hidden="true"></span></summary><div class="faq-a"><p>E-commerce stores such as Wopper.in and VY16 Design Studio, a real estate website, a matrimony website, a hotel channel manager, a billing management system and an inventory management system.</p></div></details>
+      <details><summary><span class="faq-n">03</span><span class="faq-q">Which technologies does Bharath work with?</span><span class="faq-i" aria-hidden="true"></span></summary><div class="faq-a"><p>Python, Django, Django REST Framework, MySQL, SQL, MongoDB, JWT and OAuth authentication, Git, GitHub, Bitbucket, Jenkins, CI/CD and VPS deployment, working in Agile teams.</p></div></details>
+      <details><summary><span class="faq-n">04</span><span class="faq-q">Is Bharath available to hire for Python or Django roles?</span><span class="faq-i" aria-hidden="true"></span></summary><div class="faq-a"><p>Yes. Bharath is open to Python, Django and backend developer roles and project work. You can reach him at ajiabharath@gmail.com or +91 63795 73737.</p></div></details>
+      <details><summary><span class="faq-n">05</span><span class="faq-q">Where is Bharath located?</span><span class="faq-i" aria-hidden="true"></span></summary><div class="faq-a"><p>Bharath is based in Chennai, Tamil Nadu, India, and has experience working with remote teams.</p></div></details>
+      <details><summary><span class="faq-n">06</span><span class="faq-q">How can I get in touch with Bharath?</span><span class="faq-i" aria-hidden="true"></span></summary><div class="faq-a"><p>Email ajiabharath@gmail.com, call +91 63795 73737, or message him on LinkedIn (linkedin.com/in/bharath18). His code is on GitHub at github.com/Bharath8992.</p></div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+<section id="cta"><h2>Let's talk!</h2><div class="btns">
+  <a href="tel:+916379573737" class="bg-[#0e0e0e] text-white pl-3 pr-8 gap-3"><img src="https://play-lh.googleusercontent.com/AKQn47okB4Qh5Qs0zx_CXj5iFRdePtpTSnf-T1UjFW49aSjwAnaTqaGy-35JqwHOKETvan8F4B6WkMQ6XiERFQw=w240-h480-rw" class="w-12 h-12 object-cover bg-brandRed" alt="">Schedule a call</a>
+  <a href="mailto:ajiabharath@gmail.com" class="bg-[#FCF4EA] text-[#0e0e0e] px-6">Start a project</a></div></section>
+
+<footer id="footer">
+  <div class="f-grid">
+    <div class="f-c1">
+      <div class="f-logo"><img src="img/logo-light.png" alt="Bharath A logo" class="logo-img f-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-sq" style="display:none"><i></i><i></i><i></i><i></i></span><span class="brand-name always">bharath</span></div>
+      <p class="f-news">Drop your email and I'll get back to you about your project or role.</p>
+      <form class="f-mail" id="f-mail"><input type="email" id="f-email" placeholder="YOUR EMAIL *" aria-label="Your email" required><button type="submit" aria-label="Send"><svg width="11" height="11" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"><path d="M2 8L8 2M3 2h5v5"/></svg></button></form>
+    </div>
+    <div class="f-c2"><div class="f-tag"><span>[</span> MENU <span>]</span></div><div class="f-links"><a href="#">Home</a><a href="#about">About</a><a href="#process">How I work</a><a href="#work">Projects</a><a href="#solutions">Skills</a><a href="#footer">Contact</a></div></div>
+    <div class="f-c3"><div class="f-tag"><span>[</span> LIVE PROJECTS <span>]</span></div><div class="f-links"><a href="https://squarebox.click" target="_blank" rel="noopener">Real Estate Website</a><a href="https://msquare.mckbytes.tech" target="_blank" rel="noopener">Hotel Channel Manager</a><a href="https://wopper.in" target="_blank" rel="noopener">Wopper.in</a><a href="https://www.vy16designstudio.com/" target="_blank" rel="noopener">VY16 Design Studio</a><a href="https://srivarammanamalai.com" target="_blank" rel="noopener">Matrimony Website</a><a href="https://www.curatherapycentre.com/" target="_blank" rel="noopener">Billing System</a></div></div>
+    <div class="f-c4">
+      <a class="f-big" href="tel:+916379573737" style="display:inline-block">+91 63795 73737</a><br>
+      <a class="f-big" href="mailto:ajiabharath@gmail.com" style="display:inline-block;font-size:clamp(20px,2.4vw,44px)">ajiabharath@gmail.com</a>
+      <div class="f-soc"><a href="#" id="lnk-in" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" id="lnk-gh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="mailto:ajiabharath@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+      <div class="f-loc"><div class="f-tag"><span>[</span> LOCATION <span>]</span></div><p>Chennai, Tamil Nadu, India</p></div>
+    </div>
+  </div>
+  <div class="f-bot">
+    <div><a href="#about">About</a><span class="sep"></span><a href="resume/Bharath-A-Resume.pdf" download>Resume</a></div>
+    <div>©2026 <b>Bharath A.</b> All rights reserved.</div>
+    <a href="#" class="f-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+</footer>
+
+<!-- CUBE (single element, flies from hero to the right side of the reel block) -->
+<div id="cube" title="Drag · hover · click"></div>
+
+<!-- REEL -->
+<div id="reel">
+  <div class="collage">
+    <div style="background-image:url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=70)"></div>
+    <div style="background:#E5103A"></div>
+    <div style="background-image:url(https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&q=70)"></div>
+    <div style="background:#E5103A"></div>
+    <div style="background-image:url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=70)"></div>
+    <div style="background-image:url(https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=70)"></div>
+    <div style="background-image:url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&q=70)"></div>
+    <div style="background:#E5103A"></div>
+    <div style="background:#E5103A"></div>
+  </div>
+  <div class="brand" id="reel-brand">Brands to people</div>
+  <div class="badge">
+    <div class="animate-spin-slow" style="position:absolute;inset:0">
+      <svg viewBox="0 0 100 100"><path id="curve" fill="none" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
+        <text style="font-size:9px;font-weight:600;letter-spacing:1.9px;fill:#fff"><textPath href="#curve">PYTHON · DJANGO · REST API · PYTHON · DJANGO ·</textPath></text></svg>
+    </div>
+    <div class="play"><i class="fa-solid fa-play"></i></div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div id="drawer-overlay" class="fixed inset-0 bg-black/30 opacity-0 pointer-events-none transition-opacity duration-300 z-[70]"></div>
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-[#FCF4EA] shadow-2xl z-[80] translate-x-full transition-transform duration-300 overflow-y-auto" aria-label="Menu">
+  <div class="p-8 min-h-full flex flex-col">
+    <div class="flex items-center justify-between pb-6 border-b border-[#E8E1D6]">
+      <a href="#" class="flex items-center gap-3" aria-label="Bharath A - home">
+        <img src="img/logo.png" alt="Bharath A logo" class="logo-img d-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <span class="logo-sq" style="display:none"><i></i><i></i><i></i><i></i></span>
+        <span class="brand-name always" style="font-size:30px">bharath</span>
+      </a>
+      <button id="close-drawer-btn" class="w-10 h-10 flex items-center justify-center hover:text-brandRed" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
+      </button>
+    </div>
+    <h2 class="text-[28px] font-semibold tracking-tight mt-9">Glad you're here! ✨</h2>
+    <a href="#about" class="mt-3 inline-flex items-center gap-1 text-[14px] font-semibold underline underline-offset-4 w-max hover:text-brandRed">Know more about me ↗</a>
+    <a href="resume/Bharath-A-Resume.pdf" download class="md:hidden mt-2 inline-flex items-center gap-1 text-[14px] font-semibold underline underline-offset-4 w-max hover:text-brandRed">Download resume ↓</a>
+    <nav class="lg:hidden mt-6 flex flex-col gap-1 text-[22px] font-semibold" aria-label="Mobile menu"><a href="#process">How I work</a><a href="#work">Projects</a><a href="#solutions">Skills</a><a href="#testi-clients">Live projects</a><a href="#footer">Contact</a></nav>
+    <div class="d-stack" aria-hidden="true"><div style="background:linear-gradient(135deg,#2e7d32,#0e0e0e)"><img src="img/wopper.png" alt="" loading="lazy" onerror="this.remove()"></div><div style="background:linear-gradient(135deg,#d9622b,#3a1a0a)"><img src="img/vy16.png" alt="" loading="lazy" onerror="this.remove()"></div><div style="background:linear-gradient(135deg,#e5103a,#4a0612)"><img src="img/Matrimony.png" alt="" loading="lazy" onerror="this.remove()"></div><div style="background:linear-gradient(135deg,#444,#0e0e0e)"><img src="img/msquare.png" alt="" loading="lazy" onerror="this.remove()"></div></div>
+    <div class="mt-10">
+      <span class="text-[12px] font-medium block mb-3"><span class="text-brandRed">[</span> LOCATION <span class="text-brandRed">]</span></span>
+      <p class="text-[16px] leading-relaxed">Chennai, Tamil Nadu,<br>India</p>
+    </div>
+    <div class="mt-8">
+      <span class="text-[12px] font-medium block mb-3"><span class="text-brandRed">[</span> CONTACT <span class="text-brandRed">]</span></span>
+      <a href="tel:+916379573737" class="text-[16px] block underline underline-offset-2">+91 63795 73737</a>
+      <a href="mailto:ajiabharath@gmail.com" class="text-[16px] block mt-1 underline underline-offset-2">ajiabharath@gmail.com</a>
+    </div>
+    <div class="d-soc flex gap-2 mt-7 pb-4">
+      <a href="https://www.linkedin.com/in/bharath18" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:ajiabharath@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</aside>
+
+<script>
+/* ---- EDIT THESE: your real links ---- */
+const LINKEDIN='https://www.linkedin.com/in/bharath18', GITHUB='https://github.com/Bharath8992';
+document.getElementById('lnk-in').href=LINKEDIN;document.getElementById('lnk-gh').href=GITHUB;
+
+/* ---- Live projects (marquee links). 3dotworld: replace '#' with its real URL ---- */
+const SITES=[['wopper.in','https://wopper.in'],['vy16designstudio.com','https://www.vy16designstudio.com/'],['squarebox.click','https://squarebox.click'],['msquare.mckbytes.tech','https://msquare.mckbytes.tech'],['srivarammanamalai.com','https://srivarammanamalai.com'],['curatherapycentre.com','https://www.curatherapycentre.com/'],['daascomputers.com','https://daascomputers.com'],['3dotworld',''],['baystatebenefits.com','https://baystatebenefits.com'],['totalinspectionservices.info','https://totalinspectionservices.info']];
+document.getElementById('mq').innerHTML=[...SITES,...SITES].map(s=>s[1]?`<a href="${s[1]}" target="_blank" rel="noopener">${s[0]}<i class="fa-solid fa-arrow-up-right-from-square"></i></a>`:`<span>${s[0]}</span>`).join('');
+
+/* footer mail box → opens your email app */
+document.getElementById('f-mail').addEventListener('submit',e=>{e.preventDefault();const v=document.getElementById('f-email').value.trim();
+ location.href='mailto:ajiabharath@gmail.com?subject='+encodeURIComponent('Portfolio enquiry')+'&body='+encodeURIComponent('Hi Bharath,\n\nYou can reach me at '+v+'.')});
+
+window.addEventListener('DOMContentLoaded',()=>{
+  /* drawer */
+  const main=document.getElementById('main-content'),dr=document.getElementById('side-drawer'),ov=document.getElementById('drawer-overlay');
+  const open=()=>{dr.classList.remove('translate-x-full');ov.classList.remove('opacity-0','pointer-events-none');main.classList.add('main-blurred')};
+  const close=()=>{dr.classList.add('translate-x-full');ov.classList.add('opacity-0','pointer-events-none');main.classList.remove('main-blurred')};
+  ['open-drawer-btn','open-drawer-icon-btn'].forEach(i=>document.getElementById(i).onclick=open);
+  document.getElementById('close-drawer-btn').onclick=close;ov.onclick=close;
+  document.querySelectorAll('#side-drawer a[href^="#"]').forEach(a=>a.addEventListener('click',close));
+
+  /* red dot cursor */
+  const cur=document.getElementById('cursor');let mx=-50,my=-50,cx=-50,cy=-50;
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+  (function loop(){cx+=(mx-cx)*.25;cy+=(my-cy)*.25;cur.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(loop)})();
+  document.querySelectorAll('a,button,#reel,#cube,.wk-card').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('big'));el.addEventListener('mouseleave',()=>cur.classList.remove('big'))});
+
+  /* reel + cube: both travel with the same scroll progress */
+  const reel=document.getElementById('reel'),cube=document.getElementById('cube'),page=document.getElementById('page'),
+        A=document.getElementById('slot-start'),B=document.getElementById('slot-end'),CS=document.getElementById('cube-slot'),
+        collage=reel.querySelector('.collage'),brand=document.getElementById('reel-brand');
+  const doc=el=>{const r=el.getBoundingClientRect(),p=page.getBoundingClientRect();return{x:r.left-p.left,y:r.top-p.top,w:r.width,h:r.height}};
+  const L=(a,b,t)=>a+(b-a)*t,ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+  let a,b,ca,cb;
+  function measure(){a=doc(A);b=doc(B);ca=doc(CS);
+    const s=Math.min(b.h*.92,b.w*.34);                      // dock: square, right side of the "Brands to people" block
+    cb={x:b.x+b.w-s-b.w*.02,y:b.y+(b.h-s)/2,w:s,h:s};update()}
+  function update(){
+    if(!a)return;
+    const end=Math.max(1,b.y-64),p=ease(Math.min(1,Math.max(0,scrollY/end)));
+    reel.style.left=L(a.x,b.x,p)+'px';reel.style.top=L(a.y,b.y,p)+'px';reel.style.width=L(a.w,b.w,p)+'px';reel.style.height=L(a.h,b.h,p)+'px';
+    cube.style.left=L(ca.x,cb.x,p)+'px';cube.style.top=L(ca.y,cb.y,p)+'px';cube.style.width=L(ca.w,cb.w,p)+'px';cube.style.height=L(ca.h,cb.h,p)+'px';
+    collage.style.opacity=1-Math.min(1,p*1.6);
+    brand.style.opacity=Math.max(0,(p-.35)/.65);
+    brand.style.fontSize=(b.w*(innerWidth<640?.068:.08))+'px';
+  }
+  addEventListener('scroll',update,{passive:true});addEventListener('resize',measure);addEventListener('load',measure);measure();setTimeout(measure,600);
+
+  /* about image parallax */
+  const row=document.getElementById('about-row'),aimg=document.getElementById('about-img');
+  function parallax(){if(!aimg||innerWidth<1024)return;const top=row.getBoundingClientRect().top;aimg.style.transform=`translateY(${Math.max(-700,Math.min(0,(top-innerHeight*.5))*1.6)}px)`}
+  addEventListener('scroll',parallax,{passive:true});addEventListener('resize',parallax);parallax();
+
+  /* how I work: 4 scroll-driven steps + click a finished step to jump back */
+  const proc=document.getElementById('process'),prog=document.getElementById('pr-prog');
+  const prImgs=[...proc.querySelectorAll('.pr-img')],prSteps=[...proc.querySelectorAll('.pr-step')],track=proc.querySelector('.pr-numtrack');
+  let curStep=-1;
+  function setStep(n){
+    if(n===curStep)return;curStep=n;
+    prImgs.forEach((im,i)=>{if(i>0)im.style.transform=i<=n?'translateX(0)':'translateX(101%)'});
+    prSteps.forEach((el,i)=>{el.classList.toggle('on',i<=n);el.classList.toggle('past',i<n);el.classList.toggle('cur',i===n)});
+    track.style.transform=`translateY(${-n}em)`;prog.style.width=((n+1)/prSteps.length*100)+'%';
+  }
+  function processScroll(){
+    if(innerWidth<1024)return;
+    const r=proc.getBoundingClientRect(),total=r.height-innerHeight,p=Math.min(.999,Math.max(0,-r.top/total));
+    setStep(Math.min(prSteps.length-1,Math.floor(p*prSteps.length)));
+  }
+  proc.querySelectorAll('.pr-head').forEach((h,i)=>h.addEventListener('click',()=>{
+    if(innerWidth<1024)return;
+    const r=proc.getBoundingClientRect(),total=r.height-innerHeight;
+    scrollTo({top:scrollY+r.top+total*(i+.5)/prSteps.length,behavior:'smooth'});
+  }));
+  addEventListener('scroll',processScroll,{passive:true});addEventListener('resize',processScroll);processScroll();
+
+  /* projects: vertical scroll → horizontal movement */
+  const work=document.getElementById('work'),wTrack=document.getElementById('wk-track'),wFill=document.getElementById('wk-fill');
+  let wMax=0,wCur=0;
+  function wMeasure(){
+    if(innerWidth<1024){work.style.height='auto';wTrack.style.transform='none';wMax=0;return}
+    wMax=Math.max(0,wTrack.scrollWidth-innerWidth+innerWidth*.03);work.style.height=(innerHeight+wMax)+'px';
+  }
+  (function wLoop(){
+    if(innerWidth>=1024&&wMax>0){const r=work.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/wMax));wCur+=(p-wCur)*.09;wTrack.style.transform=`translate3d(${-wCur*wMax}px,0,0)`;wFill.style.width=(wCur*100)+'%'}
+    requestAnimationFrame(wLoop);
+  })();
+  addEventListener('resize',wMeasure);addEventListener('load',wMeasure);wMeasure();
+
+  /* backend challenges: interactive slider (edit the text to match your real experience) */
+  const C=[
+   {p:'Hotel Channel Manager',q:'The same room was being sold on two booking platforms at once, causing double bookings.',f:'I made one central inventory the single source of truth, pushed availability to every platform through API workflows, and wrapped booking writes in atomic database transactions so two guests can never claim the same room.',t:['Django','REST APIs','MySQL','Transactions']},
+   {p:'Wopper.in',q:'Customers paid, but some orders stayed stuck as "pending".',f:'I stopped trusting the browser. The server now verifies each Razorpay payment signature before marking an order paid, and handles repeat callbacks safely so an order is never processed twice.',t:['Razorpay','DRF','Idempotency']},
+   {p:'Real Estate Platform',q:'Property search and dashboards slowed down as listings and bookings grew.',f:'I profiled the queries, added the right indexes, removed N+1 lookups with select_related and prefetch_related, and moved heavy filtering into the database instead of Python.',t:['SQL','Indexing','Query tuning']},
+   {p:'Authentication',q:'Different users (admins, staff, customers) needed different access, without breaking login.',f:'I used JWT and OAuth with short-lived access tokens, refresh flows and role-based permission checks on every sensitive endpoint, so admin dashboards stay locked to admins.',t:['JWT','OAuth','Permissions']},
+   {p:'Production Deployment',q:'Code that worked locally behaved differently once it reached the VPS.',f:'I moved settings into environment variables, automated builds and releases with Git and CI/CD (Jenkins), and added a test and log check before each release so problems show up before users see them.',t:['VPS','CI/CD','Jenkins','Git']}
+  ];
+  let ci=0;const tcard=document.getElementById('t-card'),rev=document.getElementById('t-rev'),fix=document.getElementById('t-fix'),dots=document.getElementById('t-dots');
+  dots.innerHTML=C.map((_,i)=>`<button aria-label="Challenge ${i+1}"></button>`).join('');
+  const db=[...dots.children];db.forEach((d,i)=>d.onclick=()=>{ci=i;showC()});
+  function showC(){
+    tcard.style.opacity=0;
+    setTimeout(()=>{
+      const c=C[ci];
+      document.getElementById('t-count').textContent='CHALLENGE '+String(ci+1).padStart(2,'0')+' / '+String(C.length).padStart(2,'0');
+      document.getElementById('t-proj').textContent=c.p;
+      document.getElementById('t-q').textContent=c.q;
+      document.getElementById('t-fixp').textContent=c.f;
+      document.getElementById('t-tags').innerHTML=c.t.map(x=>`<span>${x}</span>`).join('');
+      fix.classList.remove('open');rev.classList.remove('open');rev.setAttribute('aria-expanded','false');rev.textContent='See how I solved it ↓';
+      db.forEach((d,i)=>d.classList.toggle('on',i===ci));
+      tcard.style.opacity=1;
+    },200);
+  }
+  rev.onclick=()=>{const o=fix.classList.toggle('open');rev.classList.toggle('open',o);rev.setAttribute('aria-expanded',o);rev.textContent=o?'Hide solution ↑':'See how I solved it ↓'};
+  document.getElementById('t-prev').onclick=()=>{ci=(ci+C.length-1)%C.length;showC()};
+  document.getElementById('t-next').onclick=()=>{ci=(ci+1)%C.length;showC()};
+  showC();
+  /* swipe the challenge card on touch screens */
+  let tx=0;tcard.addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX},{passive:true});
+  tcard.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50){ci=(ci+(d<0?1:C.length-1))%C.length;showC()}},{passive:true});
+  /* FAQ structured data, built from the visible FAQ so both always match */
+  const fq=[...document.querySelectorAll('#faq details')].map(d=>({'@type':'Question',name:d.querySelector('summary').textContent.trim(),acceptedAnswer:{'@type':'Answer',text:d.querySelector('p').textContent.trim()}}));
+  const ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:fq});document.head.appendChild(ld);
+
+  /* FAQ accordion: smooth open/close, one open at a time */
+  const calm=matchMedia('(prefers-reduced-motion:reduce)').matches,dur=calm?0:300;
+  document.querySelectorAll('#faq details').forEach(d=>{
+    const sm=d.querySelector('summary'),a=d.querySelector('.faq-a');
+    sm.addEventListener('click',e=>{e.preventDefault();
+      if(d.open){const h=a.offsetHeight,an=a.animate({height:[h+'px','0px'],opacity:[1,0]},{duration:dur,easing:'ease',fill:'forwards'});an.onfinish=()=>{d.open=false;an.cancel()}}
+      else{document.querySelectorAll('#faq details[open]').forEach(o=>{if(o!==d)o.querySelector('summary').click()});
+        d.open=true;const h=a.offsetHeight;a.animate({height:['0px',h+'px'],opacity:[0,1]},{duration:dur,easing:'ease'})}
+    });
+  });
+
+  /* ---------- HERO CUBE: glowing, interactive, assembles on load ---------- */
+  const SIZE=520,ren=new THREE.WebGLRenderer({antialias:true,alpha:true});
+  ren.setPixelRatio(Math.min(devicePixelRatio,2));ren.setSize(SIZE,SIZE,false);cube.appendChild(ren.domElement);
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,100);cam.position.z=16;
+  scene.add(new THREE.AmbientLight(0xffffff,.55));
+  const dl=new THREE.DirectionalLight(0xffffff,1.1);dl.position.set(8,14,12);scene.add(dl);
+  const rl=new THREE.PointLight(0xff2a4d,3.2,30);rl.position.set(0,0,0);scene.add(rl);      // red core glow
+  const bl=new THREE.PointLight(0x6fb7ff,1.4,40);bl.position.set(-9,-8,8);scene.add(bl);    // cool rim light
+  const g=new THREE.Group();scene.add(g);
+  const geo=new THREE.BoxGeometry(.9,.9,.9),red=new THREE.Color(0xff2a4d),cubes=[];
+  const pal=[0x23262d,0x3a3f48,0x5c636f,0x9aa3b0,0xdfe3ea].map(x=>new THREE.Color(x));
+  for(let x=-4;x<=4;x++)for(let y=-4;y<=4;y++)for(let z=-4;z<=4;z++){
+    const d=Math.sqrt(x*x+y*y+z*z);
+    if(d<3.7&&Math.random()>.3){if(d>1.8&&Math.random()>.86)continue;
+      const hot=d>=1.6&&Math.random()>.88;
+      const base=hot?red.clone():pal[Math.min(4,Math.floor((y+4)/9*5+Math.random()*1.4))].clone();
+      const mat=new THREE.MeshStandardMaterial({color:base.clone(),roughness:.38,metalness:.55,emissive:hot?0x5a0016:0x000000});
+      const m=new THREE.Mesh(geo,mat),home=new THREE.Vector3(x*.95,y*.95,z*.95);
+      m.position.copy(home).multiplyScalar(3.2).add(new THREE.Vector3((Math.random()-.5)*6,(Math.random()-.5)*6,(Math.random()-.5)*6)); // start scattered, fly in
+      g.add(m);cubes.push({m,home,base,vel:new THREE.Vector3(),spin:new THREE.Vector3((Math.random()-.5)*.2,(Math.random()-.5)*.2,0),heat:0,hot});
+    }}
+  const N=140,pp=new Float32Array(N*3);
+  for(let i=0;i<N;i++){const r=4.8+Math.random()*1.4,th=Math.random()*6.283,ph=Math.acos(2*Math.random()-1);pp[i*3]=r*Math.sin(ph)*Math.cos(th);pp[i*3+1]=r*Math.sin(ph)*Math.sin(th);pp[i*3+2]=r*Math.cos(ph)}
+  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pp,3));
+  const dust=new THREE.Points(pg,new THREE.PointsMaterial({color:0xff6a85,size:.11,transparent:true,opacity:.85}));scene.add(dust);
+
+  addEventListener('loaderdone',()=>cubes.forEach(o=>{o.m.position.copy(o.home).multiplyScalar(3.2).add(new THREE.Vector3((Math.random()-.5)*6,(Math.random()-.5)*6,(Math.random()-.5)*6));o.vel.set(0,0,0)}));
+  let drag=false,moved=0,hover=false,last={x:0,y:0};const av={x:.0015,y:.004};
+  const ndc=new THREE.Vector2(),ray=new THREE.Raycaster();
+  const setN=e=>{const r=ren.domElement.getBoundingClientRect();ndc.set(((e.clientX-r.left)/r.width)*2-1,-((e.clientY-r.top)/r.height)*2+1)};
+  function boom(){cubes.forEach(o=>{const d=o.home.clone().normalize().add(new THREE.Vector3(Math.random()-.5,Math.random()-.5,Math.random()-.5).multiplyScalar(.6));
+    o.vel.add(d.multiplyScalar(.45+Math.random()*.8));o.spin.set((Math.random()-.5)*.5,(Math.random()-.5)*.5,(Math.random()-.3)*.3);o.heat=1})}
+  cube.addEventListener('pointerdown',e=>{drag=true;moved=0;hover=true;last={x:e.clientX,y:e.clientY};setN(e);try{cube.setPointerCapture(e.pointerId)}catch(_){}});
+  cube.addEventListener('pointermove',e=>{setN(e);hover=true;if(!drag)return;const dx=e.clientX-last.x,dy=e.clientY-last.y;moved+=Math.abs(dx)+Math.abs(dy);av.y=dx*.01;av.x=dy*.01;g.rotation.y+=dx*.01;g.rotation.x+=dy*.01;last={x:e.clientX,y:e.clientY}});
+  cube.addEventListener('pointerup',()=>{drag=false;if(moved<6)boom()});
+  cube.addEventListener('pointerleave',()=>{hover=false;drag=false});cube.addEventListener('pointercancel',()=>{drag=false;hover=false});
+  const inv=new THREE.Quaternion(),tmp=new THREE.Vector3(),wp=new THREE.Vector3(),cp=new THREE.Vector3(),push=new THREE.Vector3(),R=2.6,clock=new THREE.Clock();
+  (function an(){requestAnimationFrame(an);
+    const t=clock.getElapsedTime();
+    if(!drag){g.rotation.y+=av.y;g.rotation.x+=av.x;av.y+=(.004-av.y)*.02;av.x+=(.0015-av.x)*.02}
+    g.scale.setScalar(1+Math.sin(t*1.6)*.025);                 // gentle breathing
+    rl.intensity=2.6+Math.sin(t*2.2)*.8;                       // pulsing core
+    dust.rotation.y=t*.06;dust.rotation.x=t*.03;
+    g.updateMatrixWorld(true);inv.copy(g.quaternion).invert();
+    let ro,rd;if(hover){ray.setFromCamera(ndc,cam);ro=ray.ray.origin;rd=ray.ray.direction}
+    for(const o of cubes){
+      if(hover){wp.copy(o.m.position).applyMatrix4(g.matrixWorld);tmp.copy(wp).sub(ro);const tt=tmp.dot(rd);cp.copy(rd).multiplyScalar(tt).add(ro);push.copy(wp).sub(cp);const d=push.length();
+        if(tt>0&&d<R){const f=1-d/R;push.normalize().multiplyScalar(f*.24).applyQuaternion(inv);o.vel.add(push);o.spin.x+=(Math.random()-.5)*f*.15;o.spin.y+=(Math.random()-.5)*f*.15;o.heat=Math.max(o.heat,f)}}
+      tmp.copy(o.home).sub(o.m.position);o.vel.addScaledVector(tmp,.035).multiplyScalar(.9);o.m.position.add(o.vel);
+      o.m.rotation.x=(o.m.rotation.x+o.spin.x)*.94;o.m.rotation.y=(o.m.rotation.y+o.spin.y)*.94;o.m.rotation.z*=.94;o.spin.multiplyScalar(.92);
+      o.heat*=.95;o.m.material.color.copy(o.base).lerp(red,o.heat);o.m.scale.setScalar(1+o.heat*.3);
+      if(o.hot)o.m.material.emissiveIntensity=.6+Math.sin(t*3+o.home.x)*.4;
+    }
+    ren.render(scene,cam)})();
+});
+</script>
+</body>
+</html>
